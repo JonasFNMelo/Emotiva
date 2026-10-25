@@ -15,9 +15,20 @@ Emotiva é um aplicativo iOS focado em **registro emocional**, **análise de sen
   - Atribui cores e categorias emocionais às notas.
 
 - **Integração com App Intents**
-  - Criar notas diretamente via **Siri**, **Spotlight**, **Widgets** e integrações do iOS.
+  - Criar notas diretamente pela **Siri**, pelo **Spotlight** e pelo app **Atalhos**, via `AppShortcutsProvider`.
   - Intent principal: `EscreverNotaIntent`.
-  
+
+> 📸 _Screenshots em breve._
+
+---
+
+## O que este projeto demonstra
+
+- **Apple Intelligence on-device** com o framework `FoundationModels` (`LanguageModelSession`) para classificar o sentimento de um texto, sem enviar dados para servidores
+- **App Intents** e **App Shortcuts**: a principal ação do app fica disponível fora dele, por voz e busca do sistema
+- **Core Data** para persistir as notas junto com a classificação
+- **MVVM**: Views, ViewModel e Models em pastas separadas, com componentes visuais reutilizáveis em `Components/`
+
 ---
 
 ## Estrutura do Projeto
@@ -51,7 +62,20 @@ Emotiva/
 
 ## Requisitos
 
-- iOS 26
-- Dispositivo compatível com Apple Intelligence
+- Xcode 26 ou superior
+- iOS 26 ou superior
+- Dispositivo compatível com Apple Intelligence, com o recurso ativado
 
+## Como rodar
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/JonasFNMelo/Emotiva.git
+   ```
+2. Abra `Emotiva.xcodeproj` no Xcode.
+3. Execute (`⌘R`) em um dispositivo ou simulador com Apple Intelligence disponível.
+
+## Autor
+
+- [**Jonas Melo**](https://github.com/JonasFNMelo)
 
